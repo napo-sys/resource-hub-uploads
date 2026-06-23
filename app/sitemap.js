@@ -7,7 +7,7 @@ export default async function sitemap() {
     .eq('status', 'approved')
 
   const docUrls = (docs || []).map(doc => ({
-    url: `https://your-domain.vercel.app/documents/${doc.id}`,
+    url: `https://resource-hub-uploads.vercel.app/documents/${doc.id}`,
     lastModified: new Date(doc.updated_at),
     changeFrequency: 'monthly',
     priority: 0.8,
@@ -15,7 +15,7 @@ export default async function sitemap() {
 
   return [
     {
-      url: 'https://your-domain.vercel.app',
+      url: 'https://resource-hub-uploads.vercel.app',
       lastModified: new Date(),
       changeFrequency: 'daily',
       priority: 1,
